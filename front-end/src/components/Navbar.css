@@ -1,0 +1,45 @@
+.navbar {
+  background: linear-gradient(90deg, #4f46e5, #22c55e);
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Center group */
+.nav-center {
+  display: flex;
+  gap: 30px;
+  margin: 0 auto; /* keeps nav centered */
+}
+
+/* Right info icon */
+.nav-right {
+  position: absolute;
+  right: 30px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.08);
+}
+
+.navbar a.active {
+  background: white;
+  color: #4f46e5;
+}
+
+/* Make info icon slightly rounder */
+.nav-right a {
+  font-size: 18px;
+}

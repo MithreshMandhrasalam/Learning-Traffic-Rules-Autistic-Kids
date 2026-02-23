@@ -1,0 +1,48 @@
+.learn-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.sign-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.sign-card {
+  background: #f1f5f9;
+  padding: 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.sign-card:hover {
+  transform: scale(1.05);
+  background: #e0f2fe;
+}
+
+.icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.message-box {
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 22px;
+  background: #dcfce7;
+  border-radius: 16px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+}

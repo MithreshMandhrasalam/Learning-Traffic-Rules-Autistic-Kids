@@ -1,0 +1,47 @@
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #eef7ff, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.home-message-card {
+  background: white;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.home-icons {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.home-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.home-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.home-text.highlight {
+  font-size: 17px;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.home-footer {
+  margin-top: 30px;
+  font-size: 15px;
+  color: #777;
+}
