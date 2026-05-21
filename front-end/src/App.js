@@ -4,6 +4,7 @@ import Learn from "./pages/Learn";
 import Quiz from "./pages/Quiz";
 import Profile from "./pages/Profile";
 import Info from "./pages/Info";
+import Scenario from "./pages/Scenario";
 import Navbar from "./components/Navbar";
 import "./styles.css";
 
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/learn" element={<Learn />} />
+        <Route path="/scenario" element={<Scenario />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/info" element={<Info />} />

@@ -12,6 +12,9 @@ function Navbar() {
         <NavLink to="/learn">
           📘 Learn
         </NavLink>
+        <NavLink to="/scenario">
+          🚦 Scenario
+        </NavLink>
         <NavLink to="/quiz">
           📝 Quiz
         </NavLink>

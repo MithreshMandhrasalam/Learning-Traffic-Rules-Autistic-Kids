@@ -1,0 +1,136 @@
+.scenario-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.scenario-container h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.scenario-subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.simulation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  border: 2px solid #e9ecef;
+}
+
+.traffic-light-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.light-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #555;
+  transition: all 0.3s ease;
+}
+
+.active-red {
+  background-color: #ff3b30;
+  box-shadow: 0 0 15px #ff3b30;
+}
+
+.active-yellow {
+  background-color: #ffcc00;
+  box-shadow: 0 0 15px #ffcc00;
+}
+
+.active-green {
+  background-color: #34c759;
+  box-shadow: 0 0 15px #34c759;
+}
+
+.scenario-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.scenario-content h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.instruction-box {
+  background-color: #e3f2fd;
+  border: 2px solid #bbdefb;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0d47a1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.instruction-box p {
+  margin: 0;
+}
+
+.read-btn {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.read-btn:hover {
+  background-color: #f57c00;
+  transform: scale(1.05);
+}
+
+.action-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+}

@@ -83,11 +83,31 @@ function Quiz() {
   const [index, setIndex] = useState(0);
   const [feedback, setFeedback] = useState("");
 
+  const speak = (text) => {
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+      const cleanText = text.replace(/[\u1000-\uFFFF]+/g, '');
+      const utterance = new SpeechSynthesisUtterance(cleanText);
+      utterance.rate = 0.9;
+      utterance.pitch = 1.1;
+      window.speechSynthesis.speak(utterance);
+    }
+  };
+
+  const handleReadQuestion = () => {
+    const textToRead = questions[index].question + ". Options are: " + questions[index].options.join(", ");
+    speak(textToRead);
+  };
+
   const handleOptionClick = (option) => {
     if (option === questions[index].correct) {
-      setFeedback("✅ Great job! You are right 🌟");
+      const msg = "✅ Great job! You are right 🌟";
+      setFeedback(msg);
+      speak("Great job! You are right");
     } else {
-      setFeedback("❌ Oops! Try again 😊");
+      const msg = "❌ Oops! Try again 😊";
+      setFeedback(msg);
+      speak("Oops! Try again");
     }
 
     // Move to next question automatically after 1.5 seconds
@@ -102,7 +122,12 @@ function Quiz() {
       <h1>📝 Traffic Rules Quiz</h1>
 
       <div className="question-card">
-        <h2>{questions[index].question}</h2>
+        <div className="question-header">
+          <h2>{questions[index].question}</h2>
+          <button className="read-btn" onClick={handleReadQuestion} title="Read Question">
+            🔊 Read
+          </button>
+        </div>
 
         <div className="options">
           {questions[index].options.map((opt) => (

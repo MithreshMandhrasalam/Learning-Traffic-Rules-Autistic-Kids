@@ -46,3 +46,19 @@
   margin-right: auto;
   font-weight: 600;
 }
+
+.tts-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 50%;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.tts-btn:hover {
+  transform: scale(1.1);
+  background: #bbdefb;
+}
