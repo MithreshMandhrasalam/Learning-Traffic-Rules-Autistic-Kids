@@ -37,6 +37,8 @@ This project was built with empathy at its core — every design and feature dec
 ## ✨ Key Features
 
 - 🟢 **Interactive Learn Module** — Browse traffic signs with simple, clear explanations
+- 🚦 **Scenario Simulation** — Step-by-step visual practice of crossing the road
+- 🔊 **Text-to-Speech (TTS)** — Audio playback of rules and questions to assist reading
 - 🧠 **Quiz Mode** — Test understanding with multiple-choice questions and instant feedback
 - 👤 **User Profile** — Track learning progress and earned badges
 - ℹ️ **Info Page** — Safety tips and guidance for parents and caregivers
@@ -166,6 +168,7 @@ npm start
 |-------|------|-------------|
 | `/` | Home | Welcome screen with navigation guidance |
 | `/learn` | Learn | Visual traffic sign library with explanations |
+| `/scenario`| Scenario | Interactive real-world crossing simulation |
 | `/quiz` | Quiz | Multiple-choice questions with scoring |
 | `/profile` | Profile | User progress, history, and earned rewards |
 | `/info` | Info | Resources for parents, teachers, and caregivers |
@@ -196,11 +199,9 @@ This application follows **autism-friendly UX principles**:
 
 ## 🔮 Future Enhancements
 
-- [ ] 🔊 Text-to-speech for all traffic signs and quiz questions
 - [ ] 🌍 Multi-language support (Tamil, Hindi, and more)
 - [ ] 🏅 Animated reward system with badges and certificates
 - [ ] 📊 Parent/Caregiver dashboard to monitor progress
-- [ ] 🎮 Traffic simulation mini-game
 - [ ] 🔐 User authentication and cloud-synced profiles
 - [ ] 📲 Progressive Web App (PWA) support for offline use
 - [ ] 🤖 AI-generated adaptive quiz difficulty
