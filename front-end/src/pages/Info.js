@@ -22,27 +22,24 @@ function Info() {
           This app was developed during the academic year 2026–2027.
         </p>
 
-        <h3>💛 Why was this app created?</h3>
+        <h3>💛 A Message to Parents & Caregivers</h3>
         <p>
-          Many children, especially autistic children, learn better
-          with pictures, emojis, and calm interaction.
+          Every child on the autism spectrum is a special and unique individual with their own beautiful way of seeing the world. We understand that teaching life skills, like road safety, can sometimes feel overwhelming. 
         </p>
-
         <p>
-          This app avoids pressure, tests, and complex text.
-          It focuses on understanding, comfort, and safety.
+          Please remember: you are doing an incredible job. Your patience, love, and dedication make a world of difference. This app was created to support <strong>you</strong> just as much as it supports your child, providing a gentle, predictable, and pressure-free environment to learn together.
         </p>
 
         <h3>🌈 Why should we use this app?</h3>
         <p>
-          • It is simple and visual  
-          • It reduces anxiety  
-          • It supports different learning needs  
-          • It helps children stay safe on the road
+          • <strong>Visual First</strong>: Reduces anxiety through clear imagery and emojis.<br/>
+          • <strong>Predictable</strong>: No timers, no loud sudden noises, no fail states.<br/>
+          • <strong>Accessible</strong>: Text-to-Speech helps those who prefer listening over reading.<br/>
+          • <strong>Real-World Practice</strong>: Our Scenario simulation helps bridge the gap to the outside world safely.
         </p>
 
         <p className="info-footer">
-          Made with care for children, parents, and teachers 💙
+          Made with deep respect and care for children, parents, and teachers 💙
         </p>
       </div>
     </div>
