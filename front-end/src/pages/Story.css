@@ -1,0 +1,121 @@
+/* Story Page */
+.story-page {}
+
+.story-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.story-header h1 { margin-bottom: 8px; }
+.story-header p  { color: var(--text-sub); margin-bottom: 20px; }
+
+/* Dot navigation */
+.story-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.story-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.story-dot.active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+.story-dot:hover {
+  background: var(--text-sub);
+}
+
+/* Story card */
+.story-card {
+  text-align: center;
+  padding: 40px 32px;
+  margin-bottom: 28px;
+  border-radius: var(--radius-xl);
+  transition: all var(--transition);
+}
+
+.story-scene-label {
+  display: inline-block;
+  background: rgba(0,0,0,0.07);
+  color: var(--text);
+  border-radius: 99px;
+  padding: 4px 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.story-emoji {
+  font-size: 5rem;
+  margin: 0 auto 24px;
+  display: block;
+  line-height: 1;
+}
+
+.story-text {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.listen-btn {
+  margin: 0 auto;
+}
+
+/* Navigation */
+.story-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.story-page-count {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-sub);
+  min-width: 56px;
+  text-align: center;
+}
+
+.story-nav .btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* End celebration */
+.story-end {
+  text-align: center;
+  background: var(--yellow-lt);
+  border: 2px solid var(--yellow);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-top: 8px;
+}
+.story-end-badge {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.story-end p {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #92400e;
+}
+
+@media (max-width: 600px) {
+  .story-card { padding: 28px 18px; }
+  .story-emoji { font-size: 3.5rem; }
+  .story-nav { gap: 12px; }
+}

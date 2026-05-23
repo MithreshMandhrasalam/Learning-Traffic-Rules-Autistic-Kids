@@ -1,0 +1,113 @@
+/* Parent Dashboard Page */
+.parent-page {}
+
+.parent-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.parent-header h1 { margin-bottom: 8px; }
+.parent-header p  { color: var(--text-sub); }
+
+.parent-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 22px 14px;
+  text-align: center;
+  border: 2px solid var(--border);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  animation: fadeUp 0.5s ease both;
+}
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-blue   { border-color: #93c5fd; background: #dbeafe; }
+.stat-purple { border-color: #c4b5fd; background: var(--purple-lt); }
+.stat-yellow { border-color: #fcd34d; background: var(--yellow-lt); }
+.stat-orange { border-color: #fdba74; background: var(--orange-lt); }
+.stat-green  { border-color: #86efac; background: var(--green-lt); }
+.stat-teal   { border-color: #5eead4; background: var(--teal-lt); }
+
+.stat-icon  { font-size: 2rem; }
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-sub);
+}
+
+.parent-section {
+  margin-bottom: 24px;
+}
+.parent-section h3 {
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.parent-empty {
+  text-align: center;
+  color: var(--text-sub);
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.tips-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tip-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.98rem;
+  color: var(--text-sub);
+  line-height: 1.5;
+}
+.tip-bullet { font-size: 1.1rem; flex-shrink: 0; }
+
+.parent-reset-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.reset-btn {
+  color: var(--red);
+  border-color: var(--red-lt);
+}
+.reset-btn:hover {
+  background: var(--red-lt);
+}
+
+.reset-msg {
+  font-weight: 700;
+  color: var(--green);
+  font-size: 0.95rem;
+}

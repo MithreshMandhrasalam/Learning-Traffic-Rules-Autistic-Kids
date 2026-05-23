@@ -80,7 +80,9 @@ function Quiz() {
   const speak = useCallback((text) => {
     if ("speechSynthesis" in window) {
       window.speechSynthesis.cancel();
-      const utt = new SpeechSynthesisUtterance(text.replace(/[^\x00-\x7F]/g, ' '));
+      // Strip non-printable characters for speech compatibility
+      const cleanText = text.replace(/[^\u0020-\uFFFF]/g, " ");
+      const utt = new SpeechSynthesisUtterance(cleanText);
       utt.rate = 0.88; utt.pitch = 1.1;
       window.speechSynthesis.speak(utt);
     }
@@ -88,7 +90,7 @@ function Quiz() {
 
   useEffect(() => {
     if (!done) speak(questions[idx].q);
-  }, [idx, done]);
+  }, [idx, done, speak, questions]);
 
   const handleAnswer = (opt) => {
     if (feedback !== null) return;
@@ -113,17 +115,17 @@ function Quiz() {
         const qc = quizzes + 1;
         setQuizzes(qc);
         localStorage.setItem("quizzesCompleted", qc);
+        // Save best score
+        const finalScore = correct ? score + 1 : score;
+        const best = parseInt(localStorage.getItem("bestScore") || "0");
+        if (finalScore > best) localStorage.setItem("bestScore", finalScore);
         // Award badge
-        const badge = getBadge(correct ? score + 1 : score);
+        const badge = getBadge(finalScore);
         const earned = JSON.parse(localStorage.getItem("badges") || "[]");
         if (!earned.includes(badge.name)) {
           earned.push(badge.name);
           localStorage.setItem("badges", JSON.stringify(earned));
         }
-        // Save best score
-        const best = parseInt(localStorage.getItem("bestScore") || "0");
-        const finalScore = correct ? score + 1 : score;
-        if (finalScore > best) localStorage.setItem("bestScore", finalScore);
         setDone(true);
       } else {
         setIdx(i => i + 1);
