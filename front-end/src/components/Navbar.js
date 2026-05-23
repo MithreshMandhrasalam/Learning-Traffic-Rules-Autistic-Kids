@@ -15,7 +15,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-brand">
         <span className="nav-logo">🚦</span>
-        <span className="nav-title">RoadSafe</span>
+        <span className="nav-title">SafeSteps Kids</span>
       </div>
 
       <div className="nav-links">
