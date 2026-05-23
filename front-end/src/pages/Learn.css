@@ -68,7 +68,7 @@
 
 .sign-card.expanded {
   border-color: var(--accent);
-  background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+  background: var(--surface2);
   box-shadow: var(--shadow-md);
 }
 
@@ -87,8 +87,8 @@
 }
 
 .sign-meaning {
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
+  background: var(--surface2);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 10px;
   font-size: 0.85rem;

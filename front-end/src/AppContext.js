@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import translations from "./translations";
 
 const AppContext = createContext();
@@ -20,8 +20,14 @@ export function AppProvider({ children }) {
   }, [theme]);
 
   const toggleLang = () => setLang((l) => (l === "en" ? "ta" : "en"));
+
+  // Cycles: normal → dark → calm → normal
   const toggleTheme = () =>
-    setTheme((t) => (t === "normal" ? "calm" : "normal"));
+    setTheme((current) => {
+      if (current === "normal") return "dark";
+      if (current === "dark") return "calm";
+      return "normal";
+    });
 
   return (
     <AppContext.Provider value={{ lang, setLang, toggleLang, theme, setTheme, toggleTheme, t }}>

@@ -6,6 +6,11 @@ function Navbar() {
   const { t, lang, toggleLang, theme, toggleTheme } = useApp();
   const n = t.nav;
 
+  const themeIcon =
+    theme === "dark" ? "☀️" : theme === "calm" ? "🌿" : "🌙";
+  const themeLabel =
+    theme === "dark" ? "Dark" : theme === "calm" ? "Calm" : "Normal";
+
   return (
     <nav className="navbar">
       <div className="nav-brand">
@@ -28,10 +33,10 @@ function Navbar() {
         <button
           className="nav-toggle-btn"
           onClick={toggleTheme}
-          title="Toggle Calm Mode"
+          title={`Switch to ${themeLabel} mode`}
           aria-label="Toggle theme"
         >
-          {theme === "normal" ? "🌙" : "☀️"}
+          {themeIcon}
         </button>
         <button
           className="nav-lang-btn"

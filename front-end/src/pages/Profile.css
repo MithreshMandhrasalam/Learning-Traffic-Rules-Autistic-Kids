@@ -1,108 +1,132 @@
+/* Profile Page */
 .profile-page {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #eef6ff, #ffffff);
+  background: var(--bg);
   display: flex;
   justify-content: center;
-  padding: 40px 20px;
+  padding: calc(var(--nav-h) + 32px) 20px 60px;
 }
 
 .profile-container {
-  background: #ffffff;
-  border-radius: 30px;
-  padding: 35px;
-  max-width: 900px;
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  max-width: 860px;
   width: 100%;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-md);
+  border: 1.5px solid var(--border);
 }
 
 .profile-title {
   text-align: center;
-  font-size: 2.2rem;
+  margin-bottom: 8px;
 }
 
 .profile-subtitle {
   text-align: center;
-  color: #666;
-  margin-bottom: 35px;
+  color: var(--text-sub);
+  margin-bottom: 36px;
 }
 
-section {
-  margin-bottom: 40px;
+.profile-section {
+  margin-bottom: 36px;
 }
 
-section h3 {
+.profile-section h3 {
   text-align: center;
   margin-bottom: 18px;
+  color: var(--text);
 }
 
 .card-row {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .emoji-card {
-  width: 90px;
-  height: 90px;
-  font-size: 2.5rem;
-  background: #f4f7fb;
-  border-radius: 22px;
+  width: 80px;
+  height: 80px;
+  font-size: 2.2rem;
+  background: var(--surface2);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
-  transition: 0.25s;
+  transition: all var(--transition);
 }
 
-.emoji-card:hover {
-  transform: scale(1.1);
-}
+.emoji-card:hover { transform: scale(1.08); border-color: var(--accent); }
 
 .emoji-card.active {
-  border: 4px solid #5aa9ff;
-  background: #e1f2ff;
+  border: 3px solid var(--accent);
+  background: var(--surface2);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
 }
 
 .slider-box {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
   justify-content: center;
 }
 
 .slider-box input {
   width: 200px;
+  accent-color: var(--accent);
 }
 
 .emoji-select {
   width: 100%;
-  padding: 15px;
-  font-size: 1.4rem;
-  border-radius: 15px;
+  padding: 12px 16px;
+  font-size: 1.2rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border);
+  background: var(--surface2);
+  color: var(--text);
+  font-family: var(--font);
+  cursor: pointer;
+  transition: border-color var(--transition);
 }
+.emoji-select:focus { border-color: var(--accent); outline: none; }
 
 .emoji-textarea {
   width: 100%;
   height: 80px;
-  font-size: 1.5rem;
-  border-radius: 15px;
-  padding: 15px;
+  font-size: 1.4rem;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  border: 2px solid var(--border);
+  background: var(--surface2);
+  color: var(--text);
+  font-family: var(--font);
+  resize: vertical;
+  transition: border-color var(--transition);
 }
+.emoji-textarea:focus { border-color: var(--accent); outline: none; }
 
 .save-btn {
   width: 100%;
-  padding: 18px;
-  font-size: 1.8rem;
-  border-radius: 25px;
-  background: #6ac76f;
+  padding: 16px;
+  font-size: 1.4rem;
+  border-radius: var(--radius-md);
+  background: var(--green);
+  color: #fff;
   border: none;
   cursor: pointer;
+  font-weight: 800;
+  font-family: var(--font);
+  transition: all var(--transition);
 }
+.save-btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
 .done-msg {
   text-align: center;
-  margin-top: 22px;
-  font-size: 1.2rem;
-}   
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green);
+}

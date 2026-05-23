@@ -1,136 +1,115 @@
+/* Scenario Page */
 .scenario-container {
   max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + 32px) 20px 60px;
   text-align: center;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .scenario-container h1 {
-  color: #333;
-  margin-bottom: 0.5rem;
+  color: var(--text);
+  margin-bottom: 8px;
 }
 
 .scenario-subtitle {
-  color: #666;
+  color: var(--text-sub);
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 }
 
 .simulation-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-  background-color: #f8f9fa;
-  border-radius: 12px;
-  border: 2px solid #e9ecef;
+  gap: 28px;
+  padding: 32px 24px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow-md);
 }
 
 .traffic-light-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: #333;
-  padding: 15px;
-  border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #1e293b;
+  padding: 16px 14px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
 }
 
 .light-circle {
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background-color: #555;
+  background: #374151;
   transition: all 0.3s ease;
 }
 
-.active-red {
-  background-color: #ff3b30;
-  box-shadow: 0 0 15px #ff3b30;
-}
-
-.active-yellow {
-  background-color: #ffcc00;
-  box-shadow: 0 0 15px #ffcc00;
-}
-
-.active-green {
-  background-color: #34c759;
-  box-shadow: 0 0 15px #34c759;
-}
+.active-red    { background: #ef4444; box-shadow: 0 0 20px #ef4444; }
+.active-yellow { background: #f59e0b; box-shadow: 0 0 20px #f59e0b; }
+.active-green  { background: #22c55e; box-shadow: 0 0 20px #22c55e; }
 
 .scenario-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 20px;
   width: 100%;
 }
 
 .scenario-content h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  color: var(--text);
   margin: 0;
 }
 
 .instruction-box {
-  background-color: #e3f2fd;
-  border: 2px solid #bbdefb;
-  padding: 1.5rem;
-  border-radius: 12px;
+  background: var(--surface2);
+  border: 2px solid var(--border);
+  padding: 20px 24px;
+  border-radius: var(--radius-md);
   width: 100%;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #0d47a1;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-.instruction-box p {
-  margin: 0;
-}
+.instruction-box p { margin: 0; }
 
 .read-btn {
-  background-color: #ff9800;
-  color: white;
+  background: var(--orange);
+  color: #fff;
   border: none;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 1rem;
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: var(--font);
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 5px;
-  transition: transform 0.2s, background-color 0.2s;
+  gap: 6px;
+  transition: all var(--transition);
 }
-
-.read-btn:hover {
-  background-color: #f57c00;
-  transform: scale(1.05);
-}
+.read-btn:hover { opacity: 0.88; transform: scale(1.04); }
 
 .action-btn {
-  background-color: #4CAF50;
-  color: white;
+  background: var(--green);
+  color: #fff;
   border: none;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-size: 1.2rem;
-  font-weight: bold;
+  padding: 14px 36px;
+  border-radius: var(--radius-md);
+  font-size: 1.1rem;
+  font-weight: 800;
+  font-family: var(--font);
   cursor: pointer;
-  transition: transform 0.2s, background-color 0.2s;
+  transition: all var(--transition);
 }
-
-.action-btn:hover {
-  background-color: #45a049;
-  transform: scale(1.05);
-}
-
-.action-btn:active {
-  transform: scale(0.95);
-}
+.action-btn:hover  { opacity: 0.9; transform: translateY(-2px); }
+.action-btn:active { transform: scale(0.97); }

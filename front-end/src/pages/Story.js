@@ -127,7 +127,6 @@ function Story() {
 
       <div
         className="story-card card animate-popin"
-        style={{ background: current.bg }}
         key={page}
       >
         <div className="story-scene-label">

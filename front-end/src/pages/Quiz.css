@@ -36,7 +36,7 @@
 }
 .option-btn:hover:not(:disabled) {
   border-color: var(--accent);
-  background: #eff6ff;
+  background: var(--surface2);
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
 }

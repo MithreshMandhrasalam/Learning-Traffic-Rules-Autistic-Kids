@@ -43,13 +43,14 @@
 
 .story-scene-label {
   display: inline-block;
-  background: rgba(0,0,0,0.07);
+  background: var(--surface2);
   color: var(--text);
   border-radius: 99px;
   padding: 4px 18px;
   font-size: 0.85rem;
   font-weight: 700;
   margin-bottom: 18px;
+  border: 1px solid var(--border);
 }
 
 .story-emoji {
